@@ -13,32 +13,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.pawandubey.junked;
 
-import java.util.Calendar;
-import javax.xml.bind.annotation.XmlRootElement;
-
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 /**
  *
  * @author Pawan Dubey <pawandubey@outlook.com>
  */
-@XmlRootElement
-public class Bunk {
-
-    private Calendar date;
-
-    public Bunk() {
-        date = Calendar.getInstance();
-        date.set(Calendar.HOUR_OF_DAY, 0);
+public class SubjectTest {
+    
+    public SubjectTest() {
+    }
+    
+    private Subject subject;
+    
+    @Before
+    public void beforeTest(){
+        subject = new Subject("TestSub");
     }
 
-    public Calendar getDate() {
-        return date;
-
+    @Test
+    public void noNegativeBunks(){
+        
+        subject.setAllowedBunks(12);
+        subject.setTotalBunks(12);
+        int bunksRemaining = subject.getAllowedBunks()-subject.getTotalBunks();
+        assertEquals(0, bunksRemaining);
     }
-
-    public void setDate(Calendar date) {
-        this.date = date;
+    
+    @Test
+    public void noSubjectWithoutName(){
+        String name = subject.getName();
+        assertNotNull(name);
     }
-
 }

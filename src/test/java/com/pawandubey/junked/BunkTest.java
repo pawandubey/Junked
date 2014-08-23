@@ -13,32 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.pawandubey.junked;
 
 import java.util.Calendar;
-import javax.xml.bind.annotation.XmlRootElement;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author Pawan Dubey <pawandubey@outlook.com>
  */
-@XmlRootElement
-public class Bunk {
-
-    private Calendar date;
-
-    public Bunk() {
-        date = Calendar.getInstance();
-        date.set(Calendar.HOUR_OF_DAY, 0);
+public class BunkTest {
+    
+    public BunkTest() {
     }
 
-    public Calendar getDate() {
-        return date;
-
+    /**
+     * Test of getDate method, of class Bunk.
+     */
+    @Test
+    public void testGetDate() {
+        Bunk instance = new Bunk();
+        Calendar expResult = Calendar.getInstance();
+        expResult.set(Calendar.HOUR_OF_DAY, 0);
+        Calendar result = instance.getDate();
+        assertEquals(expResult.DAY_OF_YEAR, result.DAY_OF_YEAR);
     }
 
-    public void setDate(Calendar date) {
-        this.date = date;
+    /**
+     * Test of setDate method, of class Bunk.
+     */
+    @Test
+    public void testSetDate() {
+        Calendar date = Calendar.getInstance();
+        Bunk instance = new Bunk();
+        instance.setDate(date);
+        assertEquals(instance.getDate(),date);
     }
-
+    
 }

@@ -13,32 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.pawandubey.junked;
 
-import java.util.Calendar;
-import javax.xml.bind.annotation.XmlRootElement;
+package com.pawandubey.junked;
 
 /**
  *
  * @author Pawan Dubey <pawandubey@outlook.com>
  */
-@XmlRootElement
-public class Bunk {
-
-    private Calendar date;
-
-    public Bunk() {
-        date = Calendar.getInstance();
-        date.set(Calendar.HOUR_OF_DAY, 0);
-    }
-
-    public Calendar getDate() {
-        return date;
-
-    }
-
-    public void setDate(Calendar date) {
-        this.date = date;
-    }
-
+public class Junked {
+    
 }

@@ -16,6 +16,9 @@
 package com.pawandubey.junked;
 
 import java.util.Calendar;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -23,8 +26,10 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Pawan Dubey <pawandubey@outlook.com>
  */
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Bunk {
-
+    
+    @XmlElement
     private Calendar date;
 
     public Bunk() {

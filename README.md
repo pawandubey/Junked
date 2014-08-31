@@ -10,7 +10,7 @@ A Java Tool To Track Your Bunks!
 Usage:
 ------
     //Create a new configuration
-    Junked junked = new JunkedFactory.getInstance();
+    Junked junked = JunkedFactory.getInstance();
     
     //Set configuration name(as person name)
     junked.setName("TestPerson");
@@ -27,6 +27,6 @@ Usage:
     junked.save();
     
     //Retrieve a saved configuration
-    Junked newJunked = new JunkedFactory.retrieve();
+    Junked newJunked = JunkedFactory.retrieve("junked");
     
 Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2</a>.

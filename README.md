@@ -5,6 +5,8 @@ A Java Tool To Track Your Bunks!
 
 * Comes with a simple API to add Subjects, manage subject wise bunks and never have shortage of attendance again ;)
 
+[![Build Status](https://travis-ci.org/pawandubey/Junked.svg)](https://travis-ci.org/pawandubey/Junked)
+
 Usage:
 ------
     //Create a new configuration

@@ -13,13 +13,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.pawandubey.junked;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Pawan Dubey <pawandubey@outlook.com>
  */
-public class Junked {
-    
+public interface Junked {
+
+    void addSubject(Subject subject);
+
+    String getName();
+
+    Subject getSubjectAt(int index);
+
+    ArrayList<Subject> getSubjects();
+
+    boolean hasSubject(Subject subject);
+
+    void removeAllSubjects();
+
+    void removeSubject(Subject subject);
+
+    void setName(String name);
+
+    void save();
 }

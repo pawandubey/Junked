@@ -10,23 +10,23 @@ A Java Tool To Track Your Bunks!
 Usage:
 ------
     //Create a new configuration
-    `Junked junked = JunkedFactory.getInstance();`
+    Junked junked = JunkedFactory.getInstance();
     
     //Set configuration name(as person name)
-    `junked.setName("TestPerson");`
+    junked.setName("TestPerson");
     
     //Create and Add a subject to the person's list
-    `Subject english = new Subject("English");`
-    `junked.addSubject(english);`
+    Subject english = new Subject("English");
+    junked.addSubject(english);
     
     //Add a bunk to the subject
-    `Bunk englishBunk = new Bunk();`
-    `junked.getSubject(english).addBunk(englishBunk);`
+    Bunk englishBunk = new Bunk();
+    junked.getSubject(english).addBunk(englishBunk);
     
     //Save the configuration
-    `junked.save();`
+    junked.save();
     
     //Retrieve a saved configuration
-    `Junked newJunked = JunkedFactory.retrieve("junked");`
+    Junked newJunked = JunkedFactory.retrieve("junked");
     
 Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2</a>.
